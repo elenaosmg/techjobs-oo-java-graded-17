@@ -25,12 +25,7 @@ public class CoreCompetency {
         return value;
     }
 
-//    @Override
-//
-//    public boolean equals() {
-//
-//        return equals(null);
-//    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -61,4 +56,6 @@ public class CoreCompetency {
     public int getId() {
         return id;
     }
+
+
 }

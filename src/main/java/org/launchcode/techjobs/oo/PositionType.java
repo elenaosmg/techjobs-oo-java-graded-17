@@ -23,7 +23,10 @@ public class PositionType {
     @Override
     public String toString() {
         return value;
-    }
+    } // EO:'return value' works because 'value' is a
+    // public variable declared in this class and accessible
+    // for 'toString' method. If 'value' is private and accessible
+    // with getter, then we need return getaValue()
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
@@ -55,5 +58,6 @@ public class PositionType {
     public void setValue(String value) {
         this.value = value;
     }
+
 
 }
