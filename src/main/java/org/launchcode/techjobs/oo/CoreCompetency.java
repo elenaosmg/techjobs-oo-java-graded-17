@@ -14,6 +14,9 @@ public class CoreCompetency extends JobField {
     }
 
 }
+
+
+//
 //public class CoreCompetency {
 //
 //    private int id;

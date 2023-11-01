@@ -90,18 +90,39 @@ public class Job {
 //        return System.lineSeparator() + idString + nameString + employerString + locationString + positionTypeString + coreCompetencyString;
 //    }
 
+//    @Override
+////    public String toString() {
+////        String separator = System.lineSeparator();
+////        String idString = "ID: " + id + System.lineSeparator();
+////        String nameString = "Name: " + (name == null ? "Data not available" : (name.isEmpty() ? "Data not available" : name)) + System.lineSeparator();
+////        String employerString = "Employer: " + (employer == null ? "Data not available" : (employer.getValue() == null ? "Data not available" : (employer.getValue().isEmpty() ? "Data not available" : employer.getValue()))) + separator;
+////        String locationString = "Location: " + (location == null ? "Data not available" : (location.getValue() == null ? "Data not available" : (location.getValue().isEmpty() ? "Data not available" : location.getValue()))) + separator;
+////        String positionTypeString = "Position Type: " + (positionType == null ? "Data not available" : (positionType.getValue() == null ? "Data not available" : (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()))) + separator;
+////        String coreCompetencyString = "Core Competency: " + (coreCompetency == null ? "Data not available" : (coreCompetency.getValue() == null ? "Data not available" : (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()))) + separator;
+////
+////        return separator + idString + nameString + employerString + locationString + positionTypeString + coreCompetencyString;
+////    }
+
+
     @Override
     public String toString() {
         String separator = System.lineSeparator();
-        String idString = "ID: " + id + separator;
-        String nameString = "Name: " + (name == null ? "Data not available" : (name.isEmpty() ? "Data not available" : name)) + separator;
-        String employerString = "Employer: " + (employer == null ? "Data not available" : (employer.getValue() == null ? "Data not available" : (employer.getValue().isEmpty() ? "Data not available" : employer.getValue()))) + separator;
-        String locationString = "Location: " + (location == null ? "Data not available" : (location.getValue() == null ? "Data not available" : (location.getValue().isEmpty() ? "Data not available" : location.getValue()))) + separator;
-        String positionTypeString = "Position Type: " + (positionType == null ? "Data not available" : (positionType.getValue() == null ? "Data not available" : (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()))) + separator;
-        String coreCompetencyString = "Core Competency: " + (coreCompetency == null ? "Data not available" : (coreCompetency.getValue() == null ? "Data not available" : (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()))) + separator;
+        String dataNotAvailable = "Data not available";
+        String idString = "ID: " + id + System.lineSeparator();
+        String nameString = "Name: " + (name == null || name.isEmpty() ? dataNotAvailable : name) + separator;
+        String employerString = "Employer: " + (employer == null || employer.getValue() == null || employer.getValue().isEmpty() ? dataNotAvailable : employer.getValue()) + separator;
+        String locationString = "Location: " + (location == null || location.getValue() == null || location.getValue().isEmpty() ? dataNotAvailable : location.getValue()) + separator;
+        String positionTypeString = "Position Type: " + (positionType == null || positionType.getValue() == null || positionType.getValue().isEmpty() ? dataNotAvailable : positionType.getValue()) + separator;
+        String coreCompetencyString = "Core Competency: " + (coreCompetency == null || coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty() ? dataNotAvailable : coreCompetency.getValue()) + separator;
 
         return separator + idString + nameString + employerString + locationString + positionTypeString + coreCompetencyString;
     }
+
+
+
+
+
+
 
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID

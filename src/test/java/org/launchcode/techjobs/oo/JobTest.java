@@ -76,7 +76,7 @@ public class JobTest { //EO:class declaration
         @Test
         public void testToStringStartsAndEndsWithNewLine() {
             Job job = new Job();
-            String jobString = job.toString(); // EO: Get the string representation of the job
+            String jobString = job.toString(); // EO: call the toString method on the job object, then the string representation stored in the jobString variable
             String newLine = System.lineSeparator(); // Define the expected new line separator. System.lineSeparator() moves cursor to the next line
 
             // Assert conditions using JUnit's assertions

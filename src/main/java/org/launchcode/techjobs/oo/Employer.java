@@ -18,7 +18,7 @@ public class Employer extends JobField {
 
 
 // BEFORE REFACTORING:
-
+//
 //public class Employer {
 //
 //
@@ -32,9 +32,6 @@ public class Employer extends JobField {
 //            super(value);
 //        }
 //    }
-//
-//
-//
 //
 //
 //

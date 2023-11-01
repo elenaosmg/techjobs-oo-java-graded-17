@@ -10,16 +10,8 @@ public class Location  extends JobField {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+//
+//
 //public class Location {
 //
 //    private int id;
